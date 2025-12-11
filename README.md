@@ -26,8 +26,8 @@ From Arduino enthusiast to ARM bare-metal expert — **4 years of embedded maste
 | Year | Journey Stage | What I Learned |
 |------|--------------|----------------|
 | **2021** 🌱 | **The Beginning** | Started with Arduino & ESP32 - Built my first IoT projects |
-| **2022** 🚀 | **AVR Mastery** | Took IMT AVR course - Learned microcontroller architecture deeply |
-| **2023** ⚡ | **ARM Revolution** | Took IMT ARM course - Entered the world of Cortex-M processors |
+| **2022** 🚀 | **AVR Mastery** | Took AVR course - Learned microcontroller architecture deeply |
+| **2023** ⚡ | **ARM Revolution** | Took ARM course - Entered the world of Cortex-M processors |
 | **2024** 💎 | **Production Ready** | Built professional projects - V2X system, Bootloaders, complete driver libraries |
 
 ---
