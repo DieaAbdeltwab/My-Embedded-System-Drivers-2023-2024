@@ -1,0 +1,42 @@
+Microcontroller features¶
+STM32F429ZIT6 in LQFP144 package
+ARM®32-bit Cortex®-M4 CPU with FPU
+180 MHz max CPU frequency
+VDD from 1.8 V to 3.6 V
+2048 KB Flash
+256 KB SRAM
+GPIOs (114) with external interrupt capability
+12-bit ADCs with 24 channels (3)
+12-bit DAC channels (2)
+USART/UART (4)
+I2C (3)
+SPI (6)
+Advanced-control Timer (2)
+General Purpose Timers (10)
+Watchdog Timers (2)
+CAN 2.0B active (2)
+SAI
+SDIO
+USB 2.0 OTG HS
+USB 2.0 OTG FS
+Camera interface
+LCD-TFT
+Random Generator (TRNG for HW entropy)
+
+
+Board features
+On-board ST-LINK/V2-B debugger/programmer with SWD connector
+Flexible board power supply
+USB VBUS
+External source (3V or 5 V)
+2.4" QVGA TFT LCD
+64-Mbit SDRAM
+L3GD20, ST MEMS motion sensor 3-axis digital output gyroscope
+Six LEDs:
+LD1 (red/green) for USB communication
+LD2 (red) for 3.3 V power-on
+Two user LEDs: LD3 (green), LD4 (red)
+Two USB OTG LEDs: LD5 (green) VBUS and LD6 (red) OC (over-current)
+Two push-buttons (user and reset)
+USB OTG with micro-AB connector
+Extension header for LQFP144 I/Os for a quick connection to a prototyping board and an easy probing
