@@ -1,12 +1,13 @@
-# ⚡ STM32 Embedded Systems Drivers Collection
+# ⚡ Embedded Systems Drivers Collection
 
 <div align="center">
 
 ![Embedded Systems](https://img.shields.io/badge/Embedded-Systems-FF6B6B?style=for-the-badge&logo=arm&logoColor=white)
+![AVR](https://img.shields.io/badge/AVR-ATmega32-00979D?style=for-the-badge&logo=atmel&logoColor=white)
 ![STM32](https://img.shields.io/badge/STM32-Drivers-03234B?style=for-the-badge&logo=stmicroelectronics&logoColor=white)
 ![ARM Cortex-M](https://img.shields.io/badge/ARM-Cortex--M-E34F26?style=for-the-badge&logo=arm&logoColor=white)
 
-**⚙️ Professional STM32 MCAL & HAL drivers built from scratch 🚀**
+**⚙️ Professional AVR & STM32 MCAL & HAL drivers built from scratch 🚀**
 
 *No HAL Libraries • No CubeMX • Pure Register-Level Programming*
 
@@ -33,24 +34,34 @@ From Arduino enthusiast to ARM bare-metal expert — **4 years of embedded maste
 
 ## 📦 **What's Inside?**
 
-This repository contains **production-ready STM32 drivers** built entirely from scratch during 2023-2024.
+This repository contains **production-ready embedded drivers** built entirely from scratch during 2022-2024.
 
-### **🎯 Three Complete Development Platforms**
+### **🎯 Four Complete Development Platforms**
 
 ```
 📁 My-Embedded-System-Drivers-2023-2024/
 │
+├── 🟡 ATmega32                (AVR 8-bit - ATmega32)
 ├── 💙 BLUEPILL-F103          (STM32F103C8T6 - Cortex-M3)
 ├── 🔷 DISCOVERY-F429ZI       (STM32F429ZIT6 - Cortex-M4)
 └── 🎯 NUCLEO-F411RE          (STM32F411RET6 - Cortex-M4)
 ```
 
-### **🏗️ Clean 5-Layer Architecture**
+### **🏗️ Clean Layered Architecture**
 
-Each board folder follows professional embedded software architecture:
-
+#### **ATmega32 - 4-Layer AVR Architecture**
 ```
-📂 Board-Folder/
+📂 ATmega32/
+│
+├── 📚 0-LIB Layer         → Standard types, bit operations, utilities
+├── ⚙️ 1-MCAL Layer        → Microcontroller peripherals (DIO, ADC, UART, etc.)
+├── 🔌 2-HAL Layer         → Hardware modules (LCD, Keypad, Sensors, etc.)
+└── 📄 main.c              → Your application starts here
+```
+
+#### **STM32 Boards - 5-Layer ARM Architecture**
+```
+📂 STM32-Board-Folder/
 │
 ├── 📚 0-LIB Layer         → Standard types, bit operations, utilities
 ├── 🧠 1-CORE Layer        → ARM Cortex-M core (NVIC, SCB, SysTick)
@@ -62,7 +73,29 @@ Each board folder follows professional embedded software architecture:
 
 ---
 
-## 🛠️ **MCAL Drivers Collection**
+## 🛠️ **AVR ATmega32 Drivers**
+
+<div align="center">
+
+### **MCAL Layer - Microcontroller Abstraction**
+
+</div>
+
+| Driver | What It Does | Status |
+|--------|-------------|--------|
+| **DIO** | Digital I/O control - LEDs, buttons, pins | ✅ Complete |
+| **ADC** | Analog to digital conversion | ✅ Complete |
+| **UART** | Serial communication (TX/RX) | ✅ Complete |
+| **SPI** | High-speed peripheral interface | ✅ Complete |
+| **I2C (TWI)** | Two-wire communication protocol | ✅ Complete |
+| **TIMER0** | 8-bit timer/counter with PWM | ✅ Complete |
+| **TIMER1** | 16-bit timer/counter with PWM | ✅ Complete |
+| **TIMER2** | 8-bit async timer with PWM | ✅ Complete |
+| **EXTI** | External interrupts | ✅ Complete |
+| **WDT** | Watchdog timer | ✅ Complete |
+
+
+## 🛠️ **STM32 MCAL Drivers Collection**
 
 <div align="center">
 
@@ -87,13 +120,18 @@ Each board folder follows professional embedded software architecture:
 
 ## 🎮 **Supported Hardware**
 
+<div align="center">
+
 ### **Development Boards**
 
-| Board | Chip | Flash | RAM | Price |
-|-------|------|-------|-----|-------|
-| **Blue Pill** | STM32F103C8T6 | 64KB | 20KB | ~$2 💰 |
-| **Discovery F429** | STM32F429ZIT6 | 2MB | 256KB | ~$40 💰 |
-| **Nucleo F411** | STM32F411RET6 | 512KB | 128KB | ~$15 💰 |
+</div>
+
+| Board | Architecture | Chip | Flash | RAM | Price |
+|-------|-------------|------|-------|-----|-------|
+| **ATmega32** | AVR 8-bit | ATmega32 | 32KB | 2KB | ~$3 💰 |
+| **Blue Pill** | ARM Cortex-M3 | STM32F103C8T6 | 64KB | 20KB | ~$2 💰 |
+| **Discovery F429** | ARM Cortex-M4 | STM32F429ZIT6 | 2MB | 256KB | ~$40 💰 |
+| **Nucleo F411** | ARM Cortex-M4 | STM32F411RET6 | 512KB | 128KB | ~$15 💰 |
 
 *All drivers tested on real hardware - no simulation!*
 
@@ -110,7 +148,7 @@ Each board folder follows professional embedded software architecture:
 ✅ **No Black Box Code** - Understand every bit operation  
 ✅ **Production Quality** - Used in real graduation projects  
 ✅ **Educational** - Learn how microcontrollers really work  
-✅ **Portable** - Easy to adapt to other STM32 families  
+✅ **Portable** - Easy to adapt to other AVR/STM32 families  
 ✅ **Lightweight** - No bloated libraries or overhead  
 
 ### **👨‍💻 Perfect For**
@@ -193,7 +231,8 @@ Fully functional Snake game running on embedded hardware!
 
 | Tool | Purpose |
 |------|---------|
-| **STM32CubeIDE** | Main development IDE |
+| **Atmel Studio** | AVR development IDE |
+| **STM32CubeIDE** | STM32 development IDE |
 | **Visual Studio Code** | Code editing |
 | **Logic Analyzer** | Protocol debugging |
 | **STM32CubeProgrammer** | Flashing firmware |
@@ -230,11 +269,11 @@ Fully functional Snake game running on embedded hardware!
 
 ### **📈 By The Numbers**
 
-- **50+** Individual drivers written
-- **3** Different STM32 boards supported
+- **70+** Individual drivers written
+- **4** Different microcontroller platforms supported
 - **4** Years of embedded systems experience
 - **5** Major projects completed
-- **10+** Peripheral types covered
+- **15+** Peripheral types covered
 
 ---
 
@@ -246,16 +285,17 @@ Fully functional Snake game running on embedded hardware!
 git clone https://github.com/DieaAbdeltwab/My-Embedded-System-Drivers-2023-2024.git
 ```
 
-### **2️⃣ Choose Your Board**
+### **2️⃣ Choose Your Platform**
 
 Pick the folder matching your hardware:
+- `ATmega32` for AVR ATmega32 microcontroller
 - `BLUEPILL-F103` for Blue Pill boards
 - `DISCOVERY-F429ZI` for Discovery boards
 - `NUCLEO-F411RE` for Nucleo boards
 
 ### **3️⃣ Open & Build**
 
-Open in STM32CubeIDE or Keil, compile, and flash!
+Open in your IDE (Atmel Studio for AVR, STM32CubeIDE for STM32), compile, and flash!
 
 ### **4️⃣ Start Building**
 
@@ -289,11 +329,10 @@ Each driver includes:
 ✨ **Graduation Project:** Excellence Grade  
 ✨ **Professional Bootloader:** Complete implementation  
 ✨ **V2X System:** Multi-technology integration  
-✨ **50+ Drivers:** All tested and working  
+✨ **70+ Drivers:** All tested and working  
 ✨ **Production Quality:** Used in real applications  
 
 ---
-
 
 <div align="center">
 
@@ -311,6 +350,6 @@ Each driver includes:
 ![GitHub Stars](https://img.shields.io/github/stars/DieaAbdeltwab/My-Embedded-System-Drivers-2023-2024?style=social)
 ![GitHub Forks](https://img.shields.io/github/forks/DieaAbdeltwab/My-Embedded-System-Drivers-2023-2024?style=social)
 
-**© 2023-2024 Diea Abdeltwab | Embedded Systems Engineer**
+**© 2022-2024 Diea Abdeltwab | Embedded Systems Engineer**
 
 </div>
